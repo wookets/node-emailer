@@ -1,0 +1,19 @@
+{
+  "name": "emailer",
+  "version": "0.1.0",
+  "main": "./index",
+  "author": "wookets <wookets@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wookets/node-emailer.git"
+  },
+  "engines": {
+    "node": ">= 0.10.x"
+  },
+  "dependencies": {
+    "config": "https://github.com/wookets/node-config/tarball/0.1.2",
+    "nodemailer": "~0.6.0"
+  },
+  "devDependencies": {
+  }
+}
