@@ -1,7 +1,7 @@
 
 var nodemailer = require('nodemailer');
 
-var config = require({file: __dirname + '/../../config.json'});
+var config = require(__dirname + '/../../config.json');
 if (!config) throw Error('You need a config.json file in the root of your project.');
 if (!config.emailer) throw Error('You need an emailer property in config.json.');
 
