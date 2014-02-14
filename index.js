@@ -1,14 +1,16 @@
 
-var config = require('config');
 var nodemailer = require('nodemailer');
 
-config.vet('emailer'); // make sure config exists
-var transportType = config.vet('emailer:transport');
-var transportOptions = config.get('emailer:settings');
+var config = require({file: __dirname + '/../../config.json'});
+if (!config) throw Error('You need a config.json file in the root of your project.');
+if (!config.emailer) throw Error('You need an emailer property in config.json.');
+
+var transportType = config.emailer.transport;
+var transportOptions = config.emailer.settings;
 
 var transport = nodemailer.createTransport(transportType, transportOptions);
 
-var defaults = config.get('emailer:default');
+var defaults = config.emailer.default;
 
 exports.send = function(email, callback) {
   if (callback == null) {
