@@ -3,6 +3,8 @@ Sits atop nodemailer.
 
 ## Install
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/wookets/node-emailer.svg)](https://greenkeeper.io/)
+
 In package.json, under dependencies, you can do...
 
 ```"emailer": "https://github.com/wookets/node-emailer/0.1.1"```
